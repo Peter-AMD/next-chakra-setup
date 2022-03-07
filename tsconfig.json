@@ -13,8 +13,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/chakra-base-components": [
+        "chakra-themes/base/components/index.ts"
+      ],
+      "@/chakra-base-branding": [
+        "chakra-themes/base/branding/index.ts"
+      ],
+      "@/chakra-base-theme": [
+        "chakra-themes/base/index.ts"
+      ],
+      "@/chakra-base-config": [
+        "chakra-themes/base/config/index.ts"
+      ]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    ".next"
+  ]
 }
